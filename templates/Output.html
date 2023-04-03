@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--Typed.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+
+    <title>Home</title>
+       <style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   display: block;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Hotels.in</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+
+
+    </ul>
+  </div>
+
+</nav>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Uptime Last Hour</th>
+      <th>Downtime Last Hour</th>
+      <th>Uptime Last Day</th>
+      <th>Downtime Last Day</th>
+      <th>Uptime Last Week</th>
+      <th>Downtime Last Week</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{ id }}</td>
+      <td>{{ uptime_lasthour }}</td>
+      <td>{{ downtime_lasthour }}</td>
+      <td>{{ uptime_lastday }}</td>
+      <td>{{ downtime_lastday }}</td>
+      <td>{{ uptime_lastweek }}</td>
+      <td>{{ downtime_lastweek }}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
