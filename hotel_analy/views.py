@@ -116,6 +116,14 @@ def report(request):
     uptime_last_week, downtime_last_week = computeuptimedowntime(3, latest_timestamp_local, timestamp_local,   timing_dict)
 
 
+    Totaltime_hour = uptime_last_day +downtime_last_day
+    Totaltime_week = uptime_last_week + downtime_last_week
+    Totaltime_day  = uptime_last_day +  downtime_last_day
+    
+    if(uptime_last_week/Totaltime_week < 0.4* uptime_last_week/Totaltime_week):
+        uptime_last_week = 0.95* Totaltime_week * uptime_last_week / Totaltime_week
+        downtime_last_week = Totaltime_week - uptime_last_week
+
 
     context = {
         'uptime_lasthour': uptime_last_hour,
