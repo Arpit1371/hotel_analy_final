@@ -120,8 +120,8 @@ def report(request):
     Totaltime_week = uptime_last_week + downtime_last_week
     Totaltime_day  = uptime_last_day +  downtime_last_day
     
-    if(uptime_last_week/Totaltime_week < 0.4* uptime_last_week/Totaltime_week):
-        uptime_last_week = 0.95* Totaltime_week * uptime_last_week / Totaltime_week
+    if(uptime_last_week/Totaltime_week < 0.4* uptime_last_day/Totaltime_day):
+        uptime_last_week = 0.95* Totaltime_week * uptime_last_day / Totaltime_day
         downtime_last_week = Totaltime_week - uptime_last_week
 
 
